@@ -1,0 +1,19 @@
+*{
+    background-color: rgb(63, 67, 127);
+}
+
+.container{
+    background-color: black;
+    height: 200px;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 40px;
+}
+
+.card{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(117, 29, 150);
+    border: 1px solid black;
+}
