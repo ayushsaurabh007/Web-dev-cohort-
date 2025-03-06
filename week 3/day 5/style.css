@@ -1,0 +1,101 @@
+.parent{
+    border: 2px solid;
+    display: grid;
+    /* grid-template-rows: 100px 100px 60px 100px; */
+    grid-template-rows: repeat(4 , 100px);
+    grid-template-columns: 40px 40px 50px 40px;
+    /* This will create a gap between all the grids */
+    grid-gap: 10px; 
+}
+
+.child{
+    border: 1px dashed;
+    margin: 2px;
+}
+
+.item-1{
+    background-color: #FFF2F2;
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+    grid-row: 1 / 3;   /* the above and this does the same thing */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-column : 1 / 3;
+}
+.item-2{
+    background-color:#A9B5DF ;
+}
+.item-3{
+    background-color: #7886C7;
+}
+.item-4{
+    background-color: #5d64a7;
+}
+
+.item-5{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color: #6b86d3
+}
+.item-6{
+    background-color:#4D55CC ;
+}
+.item-7{
+    background-color: #7A73D1;
+}
+.item-8{
+    /* from whereever you start you span your column to 3 value */
+    grid-column-end: span  3;
+    background-color: #B5A8D5;
+}
+
+.relative{
+    height: 80px;
+    width: 80px;
+    background-color: rgb(17, 165, 56);
+    position: relative;
+    top: 20px;
+    left: 40px;
+}
+
+
+.rel-container{
+    margin-left: 40px;
+    background-color: beige;
+    height: 200px;
+    width: 600px;
+}
+
+.absolute{
+    height: 80px;
+    width: 80px;
+    background-color: rgb(17, 165, 56);
+    position : absolute ; 
+    top: 100px;
+    left: 500px;
+}
+
+.fixed{
+    height: 80px;
+    width: 80px;
+    background-color: rgb(17, 165, 56);
+    position: fixed;
+    top: 500px;
+    left: 500px;
+}
+.not-fixed{
+    height: 40px;
+    width: 80px;
+    background-color: rgb(54, 83, 134);
+    position: fixed;
+}
+
+.sticky{
+    height: 20px;
+    width: 80px;
+    background-color: rgb(17, 165, 56);
+    position: sticky;
+    top: 20px;
+}
