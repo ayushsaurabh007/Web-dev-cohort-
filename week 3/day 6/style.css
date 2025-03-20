@@ -1,0 +1,24 @@
+.ayush-navbar{
+    margin: 20px;
+   
+    background-color: rgb(47, 135, 229);
+}
+
+.nav-div{
+    background-color: rgb(69, 150, 237);
+    border-radius: 5px;
+}
+
+.car-heading{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container{
+    display: flex;
+}
+
+.child{
+    height: 250px;
+    width: 250px;
+}
