@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <style>
+        *{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="ul"></ul>
+    <script>
+        let ul = document.querySelector(".ul");
+        
+        function renderToScreen(obj){
+            const products = obj.data.data;
+            console.log(products)
+            products.forEach((product) => {
+                const li = document.createElement('li');
+                li.innerText = product.brand;
+                ul.appendChild(li);
+            })
+        }
+        
+        https://api.freeapi.app/api/v1/public/randomproducts
+        fetch("https://api.freeapi.app/api/v1/public/randomproducts")    //fetch always gives responce or error
+            .then((responce) => {
+                return responce.json();
+            })
+            .then((obj) => {
+                renderToScreen(obj)
+                console.log(obj)
+            })
+            .catch((error) => {console.log(error)})
+
+    </script>
+</body>
+</html>
